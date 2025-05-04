@@ -60,7 +60,7 @@ class App:
             with open(r"C:\ProgramData\Explore\gold.data", "r+") as f:
                 f.write("false")
             self.gold_window.quit() # 退出 Tkinter 主循环
-            os._exit(0) # 强制退出程序
+            os._exit(0) # 强制退出
 
     def font_size(self, component, base_font_size = 9, base_width = 300, base_height = 200): # 调整字体大小
         x = self.gold_window.winfo_width() / base_width
@@ -72,9 +72,10 @@ class App:
         if self.gold in self.gold_list:
             self.gold_achievement.config(text = f'Achievement! You have {self.gold} gold.')
             self.gold_window.after(1500, lambda: self.gold_achievement.config(text = ''))
+            # 彩蛋
             if self.gold == 15231013:
-               messagebox.showinfo('Birthday!', 'Oh, my god! Happy birthday! gold!')
- 
+               messagebox.showinfo('Birthday!', 'Oh, my god! Happy birthday! Furina!') # 作者同学要求加的
+               
     def gold_press(self): # 点击 gold 按钮
         self.gold += 1
         self.gold_number.config(text = f'Have {self.gold} gold now.')
