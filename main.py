@@ -13,13 +13,6 @@ class App:
         with open("gold_achievement.txt", "r") as f: # 读取成就列表
             self.gold_list = f.readlines() # 读取金子列表
             self.gold_list = [int(i.strip()) for i in self.gold_list] # 读取金子列表并转换为 int 类型
-        if not os.path.exists(r"C:\ProgramData\Explore"):
-            os.makedirs(r"C:\ProgramData\Explore")
-        if not os.path.exists(r"C:\ProgramData\Explore\gold.data"):
-            with open(r"C:\ProgramData\Explore\gold.data", "w") as f:
-                f.write("true")
-        with open(r"C:\ProgramData\Explore\gold.data", "r+") as f:
-            f.write("true")
         self.gold_list.sort() # 排序金子列表
         self.gold = 0 # 当前拥有的金子
         self.gold_window = tk.Tk() # 创建窗口
