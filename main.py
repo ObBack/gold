@@ -10,7 +10,7 @@ class MainWindow(QMainWindow):
         self.ui = QUiLoader().load('./ui/main.ui')
         self.setWindowTitle('Gold')
         self.setCentralWidget(self.ui)
-        self.setFixedSize(600, 300)
+        self.setFixedSize(200, 200)
         self.setWindowIcon(QIcon("./icon.ico"))
         self.ver = "v_1.0.2"
         self.load_achievement_list()
@@ -34,7 +34,7 @@ class MainWindow(QMainWindow):
             QMessageBox.critical(self, "Error", f"加载成就列表失败: {str(e)}")
 
     def update_display(self):  # 更新界面显示
-        self.gold_label.setText(f"Current Gold: {self.gold}")
+        self.gold_label.setText(f"Gold: {self.gold}")
 
     def add_gold(self):  # 增加金币
         self.gold += 1
