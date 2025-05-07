@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2025/5/7 12:20
+# @File    : main.py
+# @Author  : obback explore
+# @Email   : 1989397949@qq.com
+
 import os
 from PySide6.QtWidgets import (QApplication, QMainWindow, QMessageBox, QPushButton, QLabel)
 from PySide6.QtGui import QIcon
